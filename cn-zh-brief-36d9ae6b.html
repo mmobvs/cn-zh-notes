@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于开云 · 站点说明</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f4f0;
+            color: #1e1e1e;
+            line-height: 1.7;
+        }
+
+        /* 深色头图 —— 克制而沉静 */
+        .hero {
+            background: #1d2a35;
+            color: #e7e3db;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #8f7e5c, #b8a585, #8f7e5c);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 380;
+            letter-spacing: 2px;
+            color: #f0ebe1;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #c6bcad;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* 正文区 —— 浅色、透气 */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+            background: #fcfaf7;
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            font-weight: 420;
+            margin: 2rem 0 0.8rem;
+            color: #2c3b47;
+            border-left: 4px solid #9c8a6b;
+            padding-left: 1rem;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0.2rem;
+        }
+
+        .content p {
+            margin-bottom: 1.4rem;
+            font-size: 1.05rem;
+            color: #2e2c2a;
+        }
+
+        /* 引用提示 */
+        .note {
+            background: #f1ede6;
+            border-left: 5px solid #aa987a;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0;
+            font-style: normal;
+            border-radius: 0 8px 8px 0;
+            color: #2f3b46;
+        }
+
+        .note strong {
+            color: #5f4e32;
+        }
+
+        /* 链接 —— 强调色 */
+        a {
+            color: #8b6f4b;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            color: #5c4429;
+            text-decoration-color: #5c4429;
+        }
+
+        /* 访问句区域 */
+        .closing {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd7cd;
+            font-size: 1rem;
+            color: #4a4a48;
+        }
+
+        .closing a {
+            font-weight: 500;
+        }
+
+        /* 两个小细节：列表式特点 */
+        .feature-list {
+            margin: 1.5rem 0 1rem;
+            padding-left: 1.2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.7rem;
+            list-style: square;
+            color: #3f4b54;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .content { padding: 2rem 1.2rem 3rem; }
+            .content h2 { font-size: 1.35rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <header class="hero">
+        <h1>开云</h1>
+        <p>一个关于信息与信任的站点 · 叙述与说明</p>
+    </header>
+
+    <!-- 正文 -->
+    <main class="content">
+
+        <h2>为什么写这篇介绍</h2>
+        <p>许多人在初次访问一个站点时，都会想弄清楚它的背景与用意。本文不是一份功能列表，也不是营销话术，而是尝试用一种平实的语气，说明<strong>开云</strong>作为一个网络标识所承载的初衷与边界。我们从可信的角度出发，把一些容易被忽略的细节写下来，供你参考。</p>
+
+        <h2>站点的基本定位</h2>
+        <p>使用互联网多年之后，很多人发现真正稀缺的不是信息，而是可靠的信息源。<a href="https://cn-zh-kai-yun.com">开云</a>便是诞生于这样一种朴素的想法：让访问者能找到一个节奏舒缓、内容经过审视的空间。这里没有弹窗，没有自动播放，也没有突发的浮层。页面只呈现文字与必要的结构，让注意力回归阅读本身。</p>
+
+        <!-- 引用提示 -->
+        <div class="note">
+            <strong>提示：</strong>如果你愿意花几分钟浏览这个站点的几个页面，或许会注意到一些细微的排版偏好——比如适中的行宽、不过分饱和的配色，以及很少使用惊叹号。这些细节并非偶然。
+        </div>
+
+        <p>过去一年里，站点陆续整理了几组与常识、技艺、日常观察有关的笔记。每一篇都不长，但都经过了反复校对。这种工作方式当然不算高效，但能确保你读到的每一段文字都不是为了凑数或迎合算法而生。</p>
+
+        <h2>几个值得提的特点</h2>
+        <ul class="feature-list">
+            <li>所有内容均以中文书写，表述尽量简洁，避免过度修饰。</li>
+            <li>不追踪访客行为，不使用第三方分析脚本。隐私不是功能，而是默认前提。</li>
+            <li>更新频率不高，但每次更新都对应一个触发思考的实际问题或阅读笔记。</li>
+        </ul>
+
+        <p>你可能会觉得这些特点稀松平常，但在这个时代，能同时做到这几点的小站点其实并不多。<strong>开云</strong>没有野心成为流量入口，它只希望成为你浏览器标签页里一个安静的去处。</p>
+
+        <h2>一些常见的疑问</h2>
+        <p>有朋友问过：站点内容是否有固定领域？其实没有。从工具的使用心得，到对某些社会现象的简短观察，再到偶尔翻译一段外文短文——只要写作者觉得值得分享，就会整理成文。唯一的标准是：不说没有根据的话。</p>
+
+        <p>至于为什么叫“开云”，并无玄机，只是希望名字听起来开阔、透气，像云散开之后露出的那一小片晴空。域名也选用了简洁的拼写，便于记忆。</p>
+
+        <!-- 访问句，自然嵌入链接 -->
+        <div class="closing">
+            <p>如果你想进一步了解这个站点的具体内容，可以直接前往 <a href="https://cn-zh-kai-yun.com">开云</a>。那里没有欢迎词，没有引导注册的按钮，只有几篇安安静静的文章，等着被你发现。</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
