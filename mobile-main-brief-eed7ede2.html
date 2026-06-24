@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 日常查询与延伸阅读</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fde9d7 0%, #f8dccc 50%, #f3ceb5 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.7;
+      color: #3b2a1b;
+    }
+
+    .card {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 251, 245, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 48px 24px 48px 24px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 20px 40px -12px rgba(100, 60, 30, 0.25),
+                  0 8px 20px rgba(230, 180, 130, 0.15);
+      border: 1px solid rgba(255, 235, 210, 0.6);
+      transition: box-shadow 0.2s;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .card {
+        padding: 2rem 1.5rem;
+        border-radius: 32px 16px 32px 16px;
+      }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #4d2e1a;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    h1 small {
+      font-size: 1rem;
+      font-weight: 350;
+      color: #8b6a4c;
+      margin-left: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      color: #7a5a3c;
+      border-left: 4px solid #dbb594;
+      padding-left: 1rem;
+      margin: 0.8rem 0 2rem 0;
+      font-style: normal;
+      background: linear-gradient(to right, #f5e4d2, transparent);
+    }
+
+    .opening {
+      font-size: 1.15rem;
+      background: #fcf4ea;
+      padding: 1.2rem 1.6rem;
+      border-radius: 30px 12px 30px 12px;
+      margin-bottom: 2rem;
+      color: #3b2a1b;
+      box-shadow: inset 0 1px 4px rgba(200, 150, 100, 0.1);
+    }
+
+    .opening p {
+      margin-bottom: 0.5rem;
+    }
+
+    .opening p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #4d2e1a;
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px dotted #ddc3ab;
+      display: inline-block;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.5rem;
+      margin: 1.2rem 0 1.8rem 0;
+    }
+
+    @media (max-width: 540px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-item {
+      background: #fcf6ef;
+      padding: 0.9rem 1.2rem;
+      border-radius: 20px 6px 20px 6px;
+      border-left: 3px solid #d7b294;
+      font-size: 0.98rem;
+      color: #3b2a1b;
+    }
+
+    .feature-item strong {
+      color: #6d4c2e;
+      font-weight: 550;
+      display: inline-block;
+      margin-right: 0.3rem;
+    }
+
+    .story-block {
+      background: #faf1e7;
+      padding: 1.6rem 1.8rem;
+      border-radius: 28px 10px 28px 10px;
+      margin: 1.8rem 0 1.5rem 0;
+    }
+
+    .story-block p {
+      margin-bottom: 1rem;
+    }
+
+    .story-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inline-link {
+      color: #7a4f2b;
+      background: #f0e0cf;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.1rem 0.5rem;
+      border-radius: 30px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      font-size: 0.96em;
+    }
+
+    .inline-link:hover {
+      background: #dbb594;
+      color: #2f1d0f;
+      border-bottom-color: #b2825b;
+    }
+
+    .cta-note {
+      margin-top: 2.2rem;
+      text-align: left;
+      background: #f4e4d3;
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px 12px 40px 12px;
+      font-size: 0.95rem;
+      color: #3b2a1b;
+      border: 1px solid #e7ceb5;
+    }
+
+    .faq-mini {
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e3cdb7;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      font-weight: 500;
+      color: #4d2e1a;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-answer {
+      color: #5d4230;
+      font-size: 0.95rem;
+      padding-left: 0.8rem;
+      border-left: 2px solid #dbb594;
+    }
+
+    .footer-note {
+      margin-top: 2.2rem;
+      font-size: 0.85rem;
+      color: #7a5f48;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    .footer-note a {
+      color: #6d4c2e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #cbaa88;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>
+      📖 爱游戏
+      <small>· 对照·延伸</small>
+    </h1>
+    <div class="subhead">日常查询时，总能找到更完整的对照与线索</div>
+
+    <div class="opening">
+      <p>一个普通的周末午后，想查一款旧游戏的背景设定，翻了几页结果都不太对。后来在 <a href="https://mobile-main-igame.com" class="inline-link">爱游戏</a> 的条目下找到了一篇详细的版本对比，连带开发初稿和废弃结局都有梳理。从那次以后，它就成了我日常查询时的固定一站。</p>
+      <p>没有喧哗的榜单，也没有悬浮的推荐——更像一个认真整理过的资料角落，适合慢慢看、对照着读。</p>
+    </div>
+
+    <div class="section-title">📌 经常用到的几个场景</div>
+    <div class="feature-grid">
+      <div class="feature-item"><strong>版本对照</strong> 同一作品不同平台、不同语言的差异，常有清晰的表格或注释</div>
+      <div class="feature-item"><strong>细节考据</strong> 从角色命名到场景彩蛋，会注明出处和推测依据</div>
+      <div class="feature-item"><strong>延伸阅读</strong> 每篇后面会附上关联条目、访谈或幕后纪录片索引</div>
+      <div class="feature-item"><strong>时间线整理</strong> 系列作品的发售顺序、更新历史和重制版说明</div>
+    </div>
+
+    <div class="story-block">
+      <p>有段时间在研究一个老系列的剧情年表，不同来源的说法互相矛盾。我试着在 <a href="https://mobile-main-igame.com" class="inline-link">爱游戏</a> 的专题页面里对照了几个版本，发现它把每一处争议都标注了出来，还引用了当时的杂志访谈和补丁说明。那种被认真对待的感觉，很像在图书馆里遇到一位熟悉冷门书架的馆员，话不多，但指向明确。</p>
+      <p>后来每次遇到需要交叉验证的信息，我都会先来这里翻一翻。不一定每次都有答案，但通常能省下不少绕路的时间。</p>
+    </div>
+
+    <div class="cta-note">
+      🧷 如果你想从一片安静的对照区开始，而不是在信息洪流里反复跳转，可以试试把 <a href="https://mobile-main-igame.com" class="inline-link">爱游戏</a> 放进书签。它不一定覆盖所有作品，但对收录过的内容，态度是实在的。
+    </div>
+
+    <div class="faq-mini">
+      <div class="faq-item">
+        <span class="faq-question">🔍 内容更新频率如何？</span>
+        <div class="faq-answer">以条目完善为主，不追求日更。遇到新版本、新考据或修正时会及时补充，并保留修订记录。</div>
+      </div>
+      <div class="faq-item">
+        <span class="faq-question">📚 适合快速查阅还是深度阅读？</span>
+        <div class="faq-answer">两者皆可。每个条目都尽量做到结构清晰，开头有概览，后面有细节展开，方便不同阅读习惯。</div>
+      </div>
+      <div class="faq-item">
+        <span class="faq-question">🧩 是否支持用户投稿或修正？</span>
+        <div class="faq-answer">目前主要通过维护团队整理，但欢迎通过站点提供的联系方式反馈遗漏或错误。</div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <a href="https://mobile-main-igame.com">爱游戏</a> · 日常查询·对照·延伸
+    </div>
+  </div>
+</body>
+</html>
