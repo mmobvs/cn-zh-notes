@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 从一次偶然的发现开始</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf8;
+      color: #1f2a3a;
+      font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.2rem 3rem;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 开场短句 — 沉静叙事 */
+    .opening {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #2c3e4e;
+      margin: 1.2rem 0 0.8rem;
+      border-left: 4px solid #b7c9d1;
+      padding-left: 1rem;
+      line-height: 1.4;
+    }
+
+    .opening span {
+      display: block;
+      font-size: 0.9rem;
+      color: #6d7e8a;
+      margin-top: 0.4rem;
+      font-weight: 300;
+    }
+
+    /* 标题层级 */
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2.8rem 0 1rem;
+      color: #1e2a36;
+      border-bottom: 1px solid #dbe2e8;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 1.8rem 0 0.6rem;
+      color: #2d4051;
+    }
+
+    p {
+      margin: 0 0 1.2rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: #2b3f4e;
+      margin-bottom: 1.5rem;
+    }
+
+    /* 承接段落之间的迂回 */
+    .quiet-break {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d7dfe6, transparent);
+      margin: 2rem 0 2.2rem;
+      width: 100%;
+      opacity: 0.5;
+    }
+
+    /* 特点列表 */
+    .feature-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2.2rem;
+    }
+
+    .feature-grid li {
+      background: #ffffff;
+      border: 1px solid #e6edf2;
+      border-radius: 12px;
+      padding: 1.3rem 1.4rem;
+      margin-bottom: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+      transition: box-shadow 0.2s;
+    }
+
+    .feature-grid li:hover {
+      box-shadow: 0 4px 12px rgba(0, 30, 40, 0.06);
+    }
+
+    .feature-grid strong {
+      display: inline-block;
+      font-weight: 500;
+      color: #3a5d6e;
+      letter-spacing: 0.02em;
+      margin-right: 0.3rem;
+    }
+
+    .feature-grid .feature-sub {
+      display: block;
+      margin-top: 0.3rem;
+      color: #4b6273;
+      font-size: 0.94rem;
+    }
+
+    /* 温和结尾 */
+    .epilogue {
+      background: #f2f5f7;
+      border-radius: 20px;
+      padding: 1.8rem 1.5rem;
+      margin: 2.8rem 0 1.5rem;
+      border-left: 3px solid #a7bcc9;
+      font-style: normal;
+    }
+
+    .epilogue p {
+      margin-bottom: 0.4rem;
+      font-size: 0.98rem;
+    }
+
+    .epilogue .tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background: #dee7ed;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: #314c5e;
+    }
+
+    a {
+      color: #2e6b87;
+      text-decoration: none;
+      border-bottom: 1px dotted #b0c9d6;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #1f5b7a;
+      color: #174a63;
+    }
+
+    /* 极简脚注（不干扰叙事） */
+    .footnote {
+      border-top: 1px solid #e1e9ef;
+      padding-top: 1.5rem;
+      margin-top: 1.8rem;
+      font-size: 0.85rem;
+      color: #627886;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footnote a {
+      border-bottom: none;
+      color: #4c697b;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+
+      .opening {
+        font-size: 1.25rem;
+        padding-left: 0.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .feature-grid li {
+        padding: 1rem 1.1rem;
+      }
+
+      .epilogue {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .footnote {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .opening {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 开场短句：一种回溯的语调 -->
+    <div class="opening">
+      一次偶然的登录，字符背后并非虚无。
+      <span>—— 关于「爱游戏」的笔记</span>
+    </div>
+
+    <p class="lead">
+      许多年过去，我们在各种平台间流转，有时会忘记一个名字如何承载一整段记忆。<br>
+      提到「游戏」，并不仅仅指向消遣，也指向一套规则、一种交互语言，以及藏在代码背后的故事。
+    </p>
+
+    <!-- 承接段落：过渡到平台属性 -->
+    <p>
+      而一个聚合了多种内容的站点，往往成为某个时期玩家的起点。它不必宣称什么，只需让那些熟悉的图标、更新的资讯、讨论的角落自然浮现。当你输入地址、看到页面加载完成的一瞬，某种连续性便悄然建立。<strong>这种连续性，正是「爱游戏」所保留的东西。</strong>
+    </p>
+
+    <!-- 特点列表：从主题内容切入，不夸张 -->
+    <h2>特点与痕迹</h2>
+    <ul class="feature-grid">
+      <li>
+        <strong>· 内容纵深</strong>
+        <span class="feature-sub">从热门评测到冷门档案，覆盖移动端与经典平台，不追热，但求完整。</span>
+      </li>
+      <li>
+        <strong>· 呈现克制</strong>
+        <span class="feature-sub">排版以文字与信息为核心，减少弹窗与浮动干扰，让阅读回归阅读。</span>
+      </li>
+      <li>
+        <strong>· 社区气息</strong>
+        <span class="feature-sub">没有生硬的算法推送，用户评论与推荐依然被放置在显眼位置。</span>
+      </li>
+      <li>
+        <strong>· 慢节奏更新</strong>
+        <span class="feature-sub">不追求每日轰炸，专注深度内容与长期专题，适合静心浏览。</span>
+      </li>
+    </ul>
+
+    <!-- 继续承接 —— 场景化叙述，而非罗列 -->
+    <div class="quiet-break"></div>
+
+    <h3>它适合什么样的时刻？</h3>
+    <p>
+      也许是一个周末的下午，你打开浏览器，想看看某款独立游戏有没有新的评测；又或者在寻找一篇旧文章时，发现它仍然静静地躺在服务器上，字体、配图一如往常。这种「稳定」在今天的网络里反而像一种罕见的美德。<br>
+      你可以在那些页面里慢慢翻，偶尔看到同好的留言，发觉自己不是唯一一个还惦记着某个玩法的人。
+    </p>
+
+    <p>
+      这个站点的存在，像是一个持续的索引——不喧哗，却一直开着门。<a href="https://mobile-index-igame.com">爱游戏</a>讲到底不是什么宏大的概念，只是让那些关于游戏的内容有一个不被冲散的地方。
+    </p>
+
+    <!-- 温和结尾：不是总结，而是一段余白 -->
+    <div class="epilogue">
+      <p>所以，不需要太多宣告。</p>
+      <p>游戏一直在变，但某些指向游戏的线索可以多停留一会儿。打开一个页面，读几行字，划动屏幕，也许会发现某个被忽略的角落，恰好合你心意。</p>
+      <p style="margin-top:0.8rem;">如果你恰好路过，不妨看看他们目前更新的专题——</p>
+      <span class="tag"># 存档重于刷新</span>
+      <span class="tag" style="margin-left:0.5rem;"># 可读的索引</span>
+    </div>
+
+    <!-- 极简信息区，不强行FAQ，但保留一点扩展感 -->
+    <div class="footnote">
+      <span>内容方向 · 移动与多平台 · 不追热点</span>
+      <span><a href="https://mobile-index-igame.com">爱游戏</a>  · 持续在线</span>
+    </div>
+
+  </div>
+</body>
+</html>
